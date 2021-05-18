@@ -1,0 +1,22 @@
+[system]
+debug = false
+
+[cors]
+allowed-origin = *
+allowed-methods = POST, OPTIONS
+allowed-headers = X-Requested-With, Content-Type, Accept, Origin, user, password
+
+[db]
+data_folder = data
+
+[login]
+user =
+password =
+
+[resume]
+actions = read,update,picture
+auth = update
+
+[linkedIn]
+actions = convert
+auth = convert
