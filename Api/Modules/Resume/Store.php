@@ -120,14 +120,4 @@ trait Store
             ],
         ],
     ];
-
-    public static function getName(): string
-    {
-        return self::$name;
-    }
-
-    public static function getStructure(): array
-    {
-        return self::$structure;
-    }
 }

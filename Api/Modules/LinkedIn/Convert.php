@@ -18,8 +18,15 @@ class Convert extends Action
     use Publications;
     use Skills;
     use Languages;
+
     public static function process(array $params): string
     {
+        $result = Update::process($params);
+
+        if (!$result) {
+            return $result;
+        }
+
         $lang = $params['lang'];
 
         unset($params['lang']);
@@ -37,9 +44,9 @@ class Convert extends Action
             'references' => null
         ];
 
-        $params = array_replace_recursive(self::getStructure(), $params);
+        $params = array_replace_recursive(self::$structure, $params);
 
-        $result = self::save(self::getName() . '-' . $lang, json_encode($resume, JSON_PRETTY_PRINT));
+        $result = self::save(self::$name . '-' . $lang, json_encode($resume));
 
         return ($result) ?? '';
     }

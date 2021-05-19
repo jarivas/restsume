@@ -15,8 +15,8 @@ password =
 
 [resume]
 actions = read,update,picture
-auth = update
+auth = update,picture
 
 [linkedIn]
-actions = convert
-auth = convert
+actions = convert,read,update,picture
+auth = convert,update,picture

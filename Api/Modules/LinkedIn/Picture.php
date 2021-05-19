@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Modules\Resume;
+namespace Api\Modules\LinkedIn;
 
 use Core\Db\Filesystem;
 use Core\Action;
@@ -18,7 +18,7 @@ class Picture extends Action
 
         $params = json_decode(self::read($store), true);
 
-        $params['basics']['picture'] = $picture;
+        $params['profile']['profilePicture'] = $picture;
 
         $params = array_replace_recursive(self::$structure, $params);
 

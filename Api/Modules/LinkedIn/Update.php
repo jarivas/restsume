@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Modules\Resume;
+namespace Api\Modules\LinkedIn;
 
 use Core\Db\Filesystem;
 use Core\Action;
@@ -15,8 +15,6 @@ class Update extends Action
         $lang = $params['lang'];
 
         unset($params['lang']);
-
-        $params = array_replace_recursive(self::$structure, $params);
 
         $result = self::save(self::$name . '-' . $lang, json_encode($params));
 

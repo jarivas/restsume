@@ -1,0 +1,5 @@
+.idea/
+data
+log/
+config/config.ini
+config/config.json
